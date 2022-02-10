@@ -1,5 +1,5 @@
 import './App.css';
-import react, { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import produce from 'immer';
 function App() {
 
@@ -66,10 +66,10 @@ function App() {
           }
         }
       })
-    })
+    });
 
     setTimeout(runSimulation, 100);
-  });
+  }, []);
 
   return (
     <div>
@@ -77,21 +77,21 @@ function App() {
         <h1>Conway's Game of Life</h1>
       </div>
       <div class="button-container">
-      <button onClick={() => {
-        setRunning(true);
-        runningRef.current = true;
-        runSimulation();
-      }}
-      disabled={running}>Start</button>
-      <button onClick={() => {
-        setRunning(false);
-        runningRef.current = false;
-      }}>Stop</button>
-      <button onClick={() => {
-        setReset(!reset);
-        setRunning(false);
-        
-      }}>Reset</button>
+        <button onClick={() => {
+          setRunning(true);
+          runningRef.current = true;
+          runSimulation();
+        }}
+          disabled={running}>Start</button>
+        <button onClick={() => {
+          setRunning(false);
+          runningRef.current = false;
+        }}>Stop</button>
+        <button onClick={() => {
+          setReset(!reset);
+          setRunning(false);
+
+        }}>Reset</button>
       </div>
       <div style={{
         width: '50%',
