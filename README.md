@@ -1,4 +1,4 @@
-![alt text](https://github.com/prabishan/GameofLife/blob/master/chrome-capture-2022-1-20.gif?raw=true)
+![Conway's Game of Life Picture](/public/chrome-capture-2022-1-20.gif?raw=true)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
